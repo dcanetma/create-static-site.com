@@ -1,0 +1,45 @@
+.features {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 2rem 0;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+.feature {
+  flex: 0 0 calc(100% - 4rem);
+  display: flex;
+  margin: 2rem;
+
+  .icon {
+    height: 3rem;
+    margin-right: 1rem;
+
+    img {
+      max-height: 100%;
+    }
+
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .subtext {
+    font-size: 0.8rem;
+    color: var(--color-grey-light);
+  }
+
+  @media screen and (min-width: 600px) {
+    flex: 0 0 calc(50% - 4rem);
+  }
+
+  @media screen and (min-width: 1000px) {
+    flex: 0 0 calc(25% - 4rem);
+  }
+
+}

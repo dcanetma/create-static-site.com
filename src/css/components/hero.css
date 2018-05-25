@@ -1,0 +1,63 @@
+.hero {
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.015rem;
+  }
+
+  .title-light {
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: var(--color-grey);
+  }
+
+  .tabs {
+    margin: 4rem 0 2rem 0;
+  }
+
+  .tab {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: var(--color-grey);
+    cursor: pointer;
+    &.active { color: var(--color-black); }
+    &:last-of-type { margin: 0; }
+  }
+
+  .snippet-block {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .comment {
+    color: var(--color-grey);
+  }
+
+  .mini-text {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: var(--color-grey-dark);
+  }
+
+  pre {
+    text-align: left;
+    background: var(--color-white);
+    border: 1px solid var(--color-grey-light);
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    padding: 1rem 1.25rem;
+    line-height: 1.5;
+  }
+
+}

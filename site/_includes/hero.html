@@ -1,0 +1,58 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="title">CSS<span class="title-light"> - Create Static Site</span></h1>
+    <p>
+      A zero-configuration modern build pipeline
+      for your static site
+    </p>
+    <div id="setup" class="getting-started">
+      <div class="tabs">
+        <div class="tab" :class="{'active': isHugo}" v-on:click="setHugo">
+          Hugo
+        </div>
+        <div class="tab" :class="{'active': isJekyll}" v-on:click="setJekyll">
+          Jekyll
+        </div>
+      </div>
+      <div class="snippet-block">
+        <div class="snippet">
+<pre v-if="isHugo"><code><span class="comment">// Scaffold your new site</span>
+npx create-static-site--template hugo
+cd my-site
+<span class="comment">// Start dev server on localhost:3000</span>
+npm start</code></pre>
+<pre v-if="isJekyll"><code><span class="comment">// Scaffold your new site</span>
+npx create-static-site--template jekyll
+cd my-site
+<span class="comment">// Install dependencies</span>
+bundle install
+<span class="comment">// Start dev server on localhost:3000</span>
+npm start</code></pre>
+        </div>
+      </div>
+      <span class="mini-text" v-if="isJekyll"><a href="https://www.ruby-lang.org/en/downloads/" target="_blank">ruby</a> and <a href="https://bundler.io" target="_blank">bundler</a> required</span>
+    </div>
+  </div>
+</section>
+
+<script>
+var app = new Vue({
+  el: '#setup',
+  data: {
+    isHugo: true,
+    isJekyll: false,
+  },
+  methods: {
+    setHugo() {
+      this.isJekyll = false
+      this.isHugo = true
+    },
+    setJekyll() {
+      this.isHugo = false
+      this.isJekyll = true
+    }
+  }
+})
+</script>

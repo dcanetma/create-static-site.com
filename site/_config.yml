@@ -1,0 +1,38 @@
+# Site settings
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Create Static Site
+author: Nichlas W. Andersen
+email: nichlas@itsnwa.com
+description: >- # this means to ignore newlines until "baseurl:"
+  A zero-configuration modern build pipeline for your static site
+keywords: # Keywords describing your site
+- jekyll
+- forestry.io
+- static site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # your site's origin, e.g. https://forestry.io
+
+# Build settings
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default" # this ensures all content renders with layouts/default.html
+markdown: kramdown
+gems:
+  - jekyll-feed
+  - jekyll-menus
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
